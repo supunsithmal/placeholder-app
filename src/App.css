@@ -1,0 +1,12 @@
+.profile-thumbnail {
+  width: 50pt;
+  height: 50pt;
+  margin-left: 10pt;
+}
+
+.post-item {
+  background: yellowgreen;
+  padding-top: 10pt;
+  padding-bottom: 10pt;
+  margin: 5pt;
+}
