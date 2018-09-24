@@ -6,7 +6,11 @@ import { getPosts } from "../../actions/PostActions";
 
 class PostList extends Component {
   getPosts(user) {
-    console.log("Fetching Posts", this.props.posts);
+    console.log("Refreshing Posts", this.props.posts);
+    this.props.getPosts();
+  }
+
+  componentDidMount() {
     this.props.getPosts();
   }
 
@@ -24,7 +28,7 @@ class PostList extends Component {
           className="btn btn-primary"
           onClick={() => this.getPosts("Supun")}
         >
-          Get Posts
+          Refresh
         </button>
 
         {posts}

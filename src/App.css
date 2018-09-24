@@ -4,6 +4,18 @@
   margin-left: 10pt;
 }
 
+.profile-pic {
+  width: 150pt;
+  height: 150pt;
+  margin-left: 10pt;
+}
+
+.profile-card {
+  padding-top: 10pt;
+  padding-bottom: 10pt;
+  margin: 5pt;
+}
+
 .post-item {
   background: yellowgreen;
   padding-top: 10pt;
