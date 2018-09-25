@@ -37,4 +37,13 @@ class PostItem extends Component {
   }
 }
 
-export default connect()(PostItem);
+const mapStateToProps = state => {
+  return {
+    comments: state.PostReducer.comments
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  { getComments }
+)(PostItem);
