@@ -9,7 +9,7 @@ import UserActions from "./UserActions";
 export function getPosts() {
   return {
     type: GET_POSTS,
-    payload: API.get("/posts")
+    payload: API.get("/posts?userId=3")
   };
 }
 

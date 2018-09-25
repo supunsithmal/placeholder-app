@@ -10,19 +10,19 @@ class Sidebar extends Component {
       <React.Fragment>
         <div className="col-2">
           <div className="nav flex-column nav-pills">
-            <a class="nav-link active" href="#/news">
+            <a className="nav-link active" href="#/news">
               News Feed
             </a>
-            <a class="nav-link" href="#/todo">
+            <a className="nav-link" href="#/todo">
               Todo
             </a>
-            <a class="nav-link" href="#/profile">
+            <a className="nav-link" href="#/profile">
               Prfile
             </a>
-            <a class="nav-link" href="#/photos">
+            <a className="nav-link" href="#/photos">
               Photos
             </a>
-            <a class="nav-link" href="#/settings">
+            <a className="nav-link" href="#/settings">
               Settings
             </a>
           </div>

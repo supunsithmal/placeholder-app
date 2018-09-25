@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { getRandomColor } from "../../utils/Utils";
 
 class CommentItem extends Component {
   constructor(props) {
@@ -6,18 +7,23 @@ class CommentItem extends Component {
   }
 
   render() {
+    const imgUrl = "https://via.placeholder.com/25/" + getRandomColor();
+
     return (
-      <div>
-        <p>Comments</p>
+      <div className="container">
+        <div className="row comment-item">
+          <img
+            className="comment-thumbnail rounded"
+            src={imgUrl}
+            alt="placeholder"
+          />
+          <div className="col">
+            <p className="small">{this.props.comment.body}</p>
+          </div>
+        </div>
       </div>
     );
   }
 }
-
-const mapStateToProps = state => {
-  return {
-    comments: state.PostReducer.comments
-  };
-};
 
 export default CommentItem;

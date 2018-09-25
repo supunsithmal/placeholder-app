@@ -22,3 +22,16 @@
   padding-bottom: 10pt;
   margin: 5pt;
 }
+
+.comment-item {
+  margin: 5pt;
+  background-color: #f0f0f0;
+}
+
+.comment-thumbnail {
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+  margin-left: 5pt;
+  width: 25pt;
+  height: 25pt;
+}
