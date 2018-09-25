@@ -3,31 +3,18 @@ import React, { Component } from "react";
 class UserProfile extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      id: 1,
-      name: "Leanne Graham",
-      username: "Bret",
-      email: "Sincere@april.biz",
-      address: {
-        street: "Kulas Light",
-        suite: "Apt. 556",
-        city: "Gwenborough",
-        zipcode: "92998-3874",
-        geo: {
-          lat: "-37.3159",
-          lng: "81.1496"
-        }
-      },
-      phone: "1-770-736-8031 x56442",
-      website: "hildegard.org",
-      company: {
-        name: "Romaguera-Crona",
-        catchPhrase: "Multi-layered client-server neural-net",
-        bs: "harness real-time e-markets"
-      }
-    };
   }
   render() {
+    let user = this.props.user;
+
+    const pills = user.company.catchPhrase.split(" ").map(str => {
+      return (
+        <span key={str} className="badge badge-pill badge-primary">
+          {str}
+        </span>
+      );
+    });
+
     return (
       <React.Fragment>
         <div className="container card profile-card">
@@ -38,22 +25,22 @@ class UserProfile extends Component {
               alt="placeholder"
             />
             <div className="col">
-              <h4>{this.state.name}</h4>
-              <h6>{this.state.company.name}</h6>
+              <h4>{user.name}</h4>
+              <h6>{user.company.name}</h6>
               <p>
-                <small>{this.state.phone}</small>
+                <small>{user.phone}</small>
               </p>
               <p>
                 <small>
-                  {this.state.address.street},{this.state.address.suite},
-                  {this.state.address.city}
+                  {user.address.street},{user.address.suite},{user.address.city}
                   <br />
-                  {this.state.address.zipcode}
+                  {user.address.zipcode}
                 </small>
               </p>
-              <a href={this.state.email}>{this.state.email}</a>
+              <a href={user.email}>{user.email}</a>
               <br />
-              <a href={this.state.website}>{this.state.website}</a>
+              <a href={user.website}>{user.website}</a>
+              <div>{pills}</div>
             </div>
           </div>
         </div>
