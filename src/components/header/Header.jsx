@@ -8,7 +8,7 @@ class Header extends Component {
   render() {
     return (
       <React.Fragment>
-        <nav className="navbar navbar-light bg-light">
+        <nav className="navbar navbar-dark bg-dark">
           <a className="navbar-brand">Home</a>
           <button className="btn btn-primary">Logout</button>
         </nav>

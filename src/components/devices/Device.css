@@ -1,0 +1,9 @@
+.device-card {
+  padding: 10pt;
+  margin: 5pt;
+}
+
+.device-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}

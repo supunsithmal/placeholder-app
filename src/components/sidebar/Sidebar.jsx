@@ -8,24 +8,22 @@ class Sidebar extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="col-2">
-          <div className="nav flex-column nav-pills">
-            <a className="nav-link active" href="#/news">
-              News Feed
-            </a>
-            <a className="nav-link" href="#/todo">
-              Todo
-            </a>
-            <a className="nav-link" href="#/profile">
-              Prfile
-            </a>
-            <a className="nav-link" href="#/photos">
-              Photos
-            </a>
-            <a className="nav-link" href="#/settings">
-              Settings
-            </a>
-          </div>
+        <div className="nav flex-column nav-pills">
+          <a className="nav-link active" href="#/news">
+            News Feed
+          </a>
+          <a className="nav-link" href="#/todo">
+            Todo
+          </a>
+          <a className="nav-link" href="#/profile">
+            Prfile
+          </a>
+          <a className="nav-link" href="#/photos">
+            Photos
+          </a>
+          <a className="nav-link" href="#/settings">
+            Settings
+          </a>
         </div>
       </React.Fragment>
     );
