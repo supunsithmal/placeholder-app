@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DeviceItem from "./DeviceItem";
 import "./Device.css";
+import NewDevice from "./NewDevice";
 import * as firebase from "firebase";
 
 class DeviceContainer extends Component {
@@ -29,6 +30,7 @@ class DeviceContainer extends Component {
         console.log("data", childData);
         devs.push(childData);
       });
+
       this.setState({
         devices: devs,
         filteredDevices: devs
@@ -50,24 +52,25 @@ class DeviceContainer extends Component {
     let deviceList = [];
     if (this.state.filteredDevices.length > 0) {
       deviceList = this.state.filteredDevices.map(device => {
-        return (
-          <div>
-            <DeviceItem key={device.key} device={device} />
-          </div>
-        );
+        return <DeviceItem key={device.key} device={device} />;
       });
     }
 
     return (
       <div>
-        <input
-          type="text"
-          placeholder="device"
-          className="form-control"
-          onChange={event => {
-            this.onTextChange(event.target.value);
-          }}
-        />
+        <div>
+          <NewDevice />
+        </div>
+        <div className="card device-card">
+          <input
+            type="search here"
+            placeholder="device"
+            className="form-control"
+            onChange={event => {
+              this.onTextChange(event.target.value);
+            }}
+          />
+        </div>
         <div className="device-grid">{deviceList}</div>
       </div>
     );

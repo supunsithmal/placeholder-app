@@ -4,6 +4,7 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import * as firebase from "firebase";
+import DeviceManager from "./DeviceManager";
 
 const config = {
   apiKey: "AIzaSyDNf0JvtXLpZiT08yDW2qEz4TYz7TXPa_U",
@@ -16,4 +17,4 @@ const config = {
 
 firebase.initializeApp(config);
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<DeviceManager />, document.getElementById("root"));

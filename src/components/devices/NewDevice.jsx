@@ -17,7 +17,8 @@ class NewDevice extends Component {
     var newPostKey = dbRef.push().key;
     dbRef.child(newPostKey).set({
       name: this.state.name,
-      have: false
+      have: true,
+      date: new Date()
     });
 
     console.log("Device Name", this.state.name);
@@ -26,6 +27,7 @@ class NewDevice extends Component {
   render() {
     return (
       <div class="card device-card">
+        <h3>Add new Device</h3>
         <input
           type="text"
           className="form-control"
