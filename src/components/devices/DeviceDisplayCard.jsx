@@ -6,7 +6,8 @@ class DeviceDisplayCard extends Component {
     super(props);
   }
   render() {
-    let backgroundColor = this.props.device.have ? "#0097a7" : "#d32f2f";
+    let backgroundColor =
+      this.props.device[2] == "Locker" ? "#0097a7" : "#d32f2f";
 
     return (
       <div
@@ -14,9 +15,9 @@ class DeviceDisplayCard extends Component {
         style={{ background: backgroundColor }}
       >
         <div>
-          <h2>{this.props.device.name}</h2>
-          <h5>{this.props.device.owner}</h5>
-          <p class="small">{this.props.device.date}</p>
+          <h2>{this.props.device[1]}</h2>
+          <h5>{this.props.device[2]}</h5>
+          <p className="small">{this.props.device.date}</p>
         </div>
       </div>
     );

@@ -14,7 +14,7 @@ class DeviceDisplayContainer extends Component {
 
   componentDidMount() {
     const db = firebase.database();
-    const dbRef = db.ref().child("devices");
+    const dbRef = db.ref().child("masterSheet");
 
     dbRef.on("value", snapshot => {
       let devs = [];
@@ -34,10 +34,12 @@ class DeviceDisplayContainer extends Component {
 
   render() {
     let burrowedArray = this.state.devices.filter(
-      device => device.have == false
+      device => device[2] == "Locker"
     );
 
-    let drawerArray = this.state.devices.filter(device => device.have == true);
+    let drawerArray = this.state.devices.filter(
+      device => device[2] != "Locker"
+    );
 
     console.log(this.state.filteredDevices);
     console.log(burrowedArray);
